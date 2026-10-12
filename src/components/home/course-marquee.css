@@ -1,0 +1,46 @@
+.course-marquee-window {
+  overflow: hidden;
+}
+
+.course-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: course-slide 65s linear infinite;
+}
+
+.course-marquee-list {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 24px;
+  padding-right: 24px;
+  margin: 0;
+  list-style: none;
+}
+
+.course-marquee:hover .course-marquee-track,
+.course-marquee:focus-within .course-marquee-track {
+  animation-play-state: paused;
+}
+
+.course-marquee a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: -3px;
+  border-radius: 4px;
+}
+
+@keyframes course-slide {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-marquee-window {
+    overflow-x: auto;
+  }
+  .course-marquee-track {
+    animation: none;
+  }
+  .course-marquee-copy {
+    display: none;
+  }
+}

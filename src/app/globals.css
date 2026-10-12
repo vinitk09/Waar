@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --animate-hero-reveal: hero-reveal 700ms ease-out both;
+  --animate-hero-reveal-delayed: hero-reveal 850ms 140ms ease-out both;
+  --animate-pillar-reveal: pillar-reveal 650ms ease-out both;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@keyframes hero-reveal {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pillar-reveal {
+  from { opacity: 0.65; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Compact delivery steps with a gentle sequential accent. */
+.delivery-pill {
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.delivery-pill:hover {
+  border-color: #b98094;
+  box-shadow: 0 4px 14px #780c2410;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .delivery-node {
+    animation: delivery-accent 6s var(--step-delay) infinite ease-in-out;
+  }
+}
+
+@keyframes delivery-accent {
+  0%, 22%, 100% { background: #f5e9ee; color: #780c24; }
+  6%, 16% { background: #780c24; color: #ffffff; }
+}

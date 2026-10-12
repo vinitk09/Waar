@@ -1,0 +1,3 @@
+﻿Asset: public/images/defence-learning-hero.png
+Generated using the built-in imagegen tool; conceptual illustration, not documentary evidence of WAARR facilities or participants.
+Prompt: Premium editorial photographic-style landscape hero for an Indian defence exam and SSB learning platform. Three young adult Indian aspirants, two men and one woman, wearing casual olive, white and maroon shirts, studying notebooks and a laptop together in a contemporary classroom. Softly blurred outdoor obstacle-training field through windows. Warm natural daylight, authentic textures, peer discussion and learning. No readable screen text, uniforms, weapons, rank badges, official insignia, logos or institution signage.

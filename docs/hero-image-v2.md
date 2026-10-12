@@ -1,0 +1,4 @@
+﻿Asset: public/images/performance-ecosystem-hero-v2.png
+Method: built-in imagegen tool.
+Prompt: Premium photographic-style illustrative landscape diptych for a sports and defence performance ecosystem in India. Equally prominent sports strength training in a modern performance gym and defence aspirant teamwork on an outdoor obstacle course. Indian young adult men and women in plain maroon, black, olive and white sportswear. Warm natural light, restrained editorial treatment. No classroom laptop scene, official insignia, military uniforms, weapons, logos or readable text. Conceptual representative imagery; not documentation of WAARR personnel or facilities.
+Homepage basis: developer brief hero headline, four-part capability line, supplied description and two immediately visible Sports and Defence actions. Additional programme and participant links retain the requested LMS discovery.

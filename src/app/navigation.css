@@ -1,0 +1,24 @@
+/* Keep anchor positioning independent of the generated utility stylesheet. */
+:root {
+  --site-header-height: 96px;
+}
+
+html {
+  scroll-padding-top: calc(var(--site-header-height) + 24px);
+}
+
+.section-anchor {
+  scroll-margin-top: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

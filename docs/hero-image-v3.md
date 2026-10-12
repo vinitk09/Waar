@@ -1,0 +1,3 @@
+﻿Asset: public/images/army-preparation-hero-v3.png
+Method: built-in imagegen tool.
+Prompt: Premium photographic-style illustrative hero for an Indian army and defence preparation website. Young adult Indian men and women in olive athletic shirts and dark trousers working together on an outdoor obstacle course at sunrise, an instructor observing, rope-training frames and distant Indian tricolour. Purposeful military-style training atmosphere. No gym, weights, classroom, laptops, combat, weapons, official ranks, logos or text. Representative imagery rather than documentation of an institution or official Army endorsement.

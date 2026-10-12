@@ -1,0 +1,11 @@
+/* Natural spacing for cards and compact copy; justify only wider introduction text. */
+main p:not([class*="uppercase"]):not([class*="text-center"]) {
+  text-align: start;
+}
+
+@media (min-width: 640px) {
+  main .waarr-introduction p:not([class*="text-xs"]) {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
