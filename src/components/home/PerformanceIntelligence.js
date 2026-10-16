@@ -14,7 +14,7 @@ export default function PerformanceIntelligence() {
       <div className="mx-auto max-w-[1480px] px-6 py-16 sm:px-10 sm:py-20 lg:px-12 lg:py-24">
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-16">
           <div>
-            <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase"><span aria-hidden="true" className="h-px w-8 bg-[#780c24]" />Future direction</p>
+            <p className="mb-5 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase">Future direction</p>
             <h2 id="intelligence-heading" className="max-w-[620px] text-3xl leading-[1.15] font-semibold tracking-[-0.035em] text-[#232025] sm:text-4xl lg:text-[44px]">Building the next generation of<br /><span className="text-[#780c24]">performance intelligence.</span></h2>
             <p className="mt-6 max-w-[540px] text-[15px] leading-7 text-[#171717]">WAARR is building toward technology-enabled systems that connect performance assessment, athlete data, training and institutional decision-making.</p>
             <p className="mt-4 max-w-[520px] text-xs leading-6 text-[#171717]">This is our future development direction. The assessment cycle outlines the approach; it does not represent an available software platform.</p>

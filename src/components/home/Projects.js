@@ -9,7 +9,7 @@ export default function Projects() {
       <div className="mx-auto max-w-[1480px] px-6 py-16 sm:px-10 sm:py-20 lg:px-12 lg:py-24">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase"><span aria-hidden="true" className="h-px w-8 bg-[#780c24]" />Projects</p>
+            <p className="mb-5 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase">Projects</p>
             <h2 id="projects-heading" className="text-3xl leading-[1.15] font-semibold tracking-[-0.035em] text-[#232025] sm:text-4xl lg:text-[44px]">From concept<br /><span className="text-[#780c24]">to implementation.</span></h2>
           </div>
           <Link href="/projects" className="group inline-flex min-h-12 w-fit items-center gap-4 rounded border border-[#780c24] px-5 py-3 text-sm font-semibold text-[#780c24] transition-colors hover:bg-[#780c24] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#780c24]">View all projects<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="transition-transform motion-safe:group-hover:translate-x-1"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg></Link>

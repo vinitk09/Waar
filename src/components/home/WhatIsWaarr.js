@@ -14,7 +14,7 @@ export default function WhatIsWaarr() {
       <div className="mx-auto max-w-[1480px] px-6 py-16 sm:px-10 sm:py-20 lg:px-12 lg:py-24">
         <div className="grid items-start gap-6 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
           <div className="transition-[opacity,transform] duration-700 ease-out motion-safe:data-[visible=false]:-translate-x-8 motion-safe:data-[visible=false]:opacity-0">
-            <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase"><span aria-hidden="true" className="h-px w-8 bg-[#780c24]" />What is WAARR?</p>
+            <p className="mb-5 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase">What is WAARR?</p>
             <h2 id="what-is-waarr-heading" className="max-w-[640px] text-3xl leading-[1.15] font-semibold tracking-[-0.035em] text-[#232025] sm:text-4xl lg:text-[44px]">Performance is not one service.<br /><span className="text-[#780c24]">It is an ecosystem.</span></h2>
           </div>
           <div className="waarr-introduction max-w-[570px] space-y-3 text-[15px] leading-7 text-[#171717] transition-[opacity,transform] duration-700 ease-out motion-safe:data-[visible=false]:translate-x-8 motion-safe:data-[visible=false]:opacity-0">

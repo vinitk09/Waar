@@ -1,3 +1,5 @@
+import { courseAcademics } from "./course-academics";
+
 export const defenceProgrammes = [
   { slug: "nda", title: "NDA Preparation", short: "NDA", audience: "Aspirants targeting the National Defence Academy pathway.", description: "Academic, physical and structured preparation for aspirants targeting the National Defence Academy pathway.", focus: ["Academic preparation", "Physical preparation", "Structured preparation planning"], interest: "NDA / CDS / SSB" },
   { slug: "cds", title: "CDS Preparation", short: "CDS", audience: "Aspirants preparing for Combined Defence Services examinations and selection processes.", description: "Integrated preparation for aspirants appearing for Combined Defence Services examinations and selection processes.", focus: ["Written examination preparation", "Selection-process preparation", "Structured preparation planning"], interest: "NDA / CDS / SSB" },
@@ -8,7 +10,7 @@ export const defenceProgrammes = [
   { slug: "communication-soft-skills", title: "Communication & Soft Skills", short: "Communication", audience: "Participants seeking to develop communication and soft skills.", description: "Explore communication and soft-skills preparation. Session format, intended outcomes and mentor details are confirmed before booking.", focus: ["Communication development", "Soft-skills preparation"], interest: "Defence Preparation" },
   { slug: "ssb-mock-assessments", title: "SSB Mock Assessments", short: "SSB Mocks", audience: "Aspirants seeking preparation practice for the SSB process.", description: "Explore coaching simulations and mock-assessment options for SSB preparation. These are preparation activities, not official selection assessments.", focus: ["Preparation simulations", "Practice and review"], interest: "NDA / CDS / SSB" },
   { slug: "in-service-guidance", title: "In-service Guidance", short: "In-service", audience: "PBORs/ORs seeking guidance on entry schemes supported by WAARR.", description: "Explore approved guidance for serving personnel. The team will confirm which entry schemes and preparation services WAARR currently supports.", focus: ["Supported-scheme guidance", "Individual preparation priorities"], interest: "Defence Preparation" },
-];
+].map(programme => ({ ...programme, ...courseAcademics[programme.slug] }));
 
 export function defenceEnquiry(programme) {
   return `/contact?interest=${encodeURIComponent(programme.interest)}&programme=${encodeURIComponent(programme.title)}&audience=${programme.slug === "acc" || programme.slug === "in-service-guidance" ? "serving-personnel" : "aspirant"}&source=defence`;

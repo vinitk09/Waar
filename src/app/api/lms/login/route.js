@@ -10,7 +10,7 @@ export async function POST(request) {
   attempts.set(ip, [...recent, Date.now()]);
   let body;
   try { body = await request.json(); } catch { return NextResponse.json({ error: "Invalid sign-in request." }, { status: 400 }); }
-  if (!body || typeof body !== "object" || (!body.demo && (typeof body.email !== "string" || typeof body.password !== "string" || body.email.length > 254 || body.password.length > 256))) return NextResponse.json({ error: "Enter your email and password." }, { status: 400 });
+  if (!body || typeof body !== "object" || body.demo || typeof body.email !== "string" || typeof body.password !== "string" || body.email.length > 254 || body.password.length > 256) return NextResponse.json({ error: "Enter your email and password." }, { status: 400 });
   const token = await startSession(body);
   if (!token) return NextResponse.json({ error: "Unable to sign in. Check your activated account details." }, { status: 401 });
   const response = NextResponse.json({ ok: true });

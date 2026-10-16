@@ -12,7 +12,7 @@ export default function WhyWaarr() {
       <div aria-hidden="true" className="pointer-events-none absolute -right-32 -bottom-48 size-[540px] rounded-full bg-[#780c24]/20 blur-3xl" />
       <div className="relative mx-auto grid max-w-[1480px] gap-10 px-6 py-16 sm:px-10 sm:py-20 lg:grid-cols-[0.9fr_1.2fr] lg:items-center lg:gap-16 lg:px-12 lg:py-24">
         <div>
-          <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#e0a8b9] uppercase"><span aria-hidden="true" className="h-px w-8 bg-[#e0a8b9]" />Why WAARR</p>
+          <p className="mb-5 text-[11px] font-semibold tracking-[0.18em] text-[#e0a8b9] uppercase">Why WAARR</p>
           <h2 id="why-waarr-heading" className="max-w-[520px] text-3xl leading-[1.15] font-semibold tracking-[-0.035em] sm:text-4xl lg:text-[44px]">One ecosystem.<br /><span className="text-[#e0a8b9]">Multiple expertises.</span></h2>
           <p className="mt-6 max-w-[460px] text-[15px] leading-7 text-[#d0c3ca]">WAARR brings infrastructure, performance science, specialised workforce and structured programme delivery under one ecosystem.</p>
           <div className="mt-8 flex items-center gap-3 text-xs leading-5 text-[#c3aab6]"><span aria-hidden="true" className="size-1.5 shrink-0 rounded-full bg-[#e0a8b9]" /><p>Connected expertise. A shared focus on performance.</p></div>

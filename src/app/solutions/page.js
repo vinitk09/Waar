@@ -26,7 +26,7 @@ function Arrow() {
 }
 
 function Eyebrow({ children, id, dark = false }) {
-  return <p id={id} className={`${id ? "section-anchor " : ""}mb-5 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] uppercase ${dark ? "text-[#e0a8b9]" : "text-[#780c24]"}`}><span aria-hidden="true" className={`h-px w-8 ${dark ? "bg-[#e0a8b9]" : "bg-[#780c24]"}`} />{children}</p>;
+  return <p id={id} className={`${id ? "section-anchor " : ""}mb-5 text-[11px] font-semibold tracking-[0.18em] uppercase ${dark ? "text-[#e0a8b9]" : "text-[#780c24]"}`}>{children}</p>;
 }
 
 function Action({ href, children, light = false, secondary = false }) {

@@ -31,7 +31,7 @@ export default function CoreVerticals() {
       <div className="mx-auto max-w-[1480px] px-6 py-16 sm:px-10 sm:py-20 lg:px-12 lg:py-24">
         <div className="mb-10 flex flex-col gap-5 lg:mb-12 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase"><span aria-hidden="true" className="h-px w-8 bg-[#780c24]" />Two core verticals</p>
+            <p className="mb-5 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase">Two core verticals</p>
             <h2 id="core-verticals-heading" className="text-3xl leading-[1.15] font-semibold tracking-[-0.035em] text-[#232025] sm:text-4xl lg:text-[44px]">Two pathways.<br /><span className="text-[#780c24]">One performance ecosystem.</span></h2>
           </div>
         </div>

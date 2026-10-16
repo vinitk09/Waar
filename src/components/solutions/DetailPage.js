@@ -10,7 +10,7 @@ export function SolutionAction({ href, children, secondary = false }) {
 }
 
 export function SolutionEyebrow({ children, id }) {
-  return <p id={id} className={`${id ? "section-anchor " : ""}mb-5 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase`}><span aria-hidden="true" className="h-px w-8 bg-[#780c24]" />{children}</p>;
+  return <p id={id} className={`${id ? "section-anchor " : ""}mb-5 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase`}>{children}</p>;
 }
 
 export function SolutionTiles({ items }) {

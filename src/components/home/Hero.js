@@ -13,7 +13,7 @@ export default function Hero() {
       <div aria-hidden="true" className="pointer-events-none absolute -top-48 -left-48 size-[550px] rounded-full border border-[#780c24]/5" />
       <div className="mx-auto grid max-w-[1480px] items-center gap-12 px-6 py-12 sm:px-10 sm:py-16 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:px-12 lg:py-20">
         <div className="motion-safe:animate-hero-reveal">
-          <p className="mb-6 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase sm:text-xs"><span aria-hidden="true" className="h-px w-8 bg-[#780c24]" />Sports & Defence. One ecosystem.</p>
+          <p className="mb-6 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase sm:text-xs">Sports & Defence. One ecosystem.</p>
           <h1 id="hero-heading" className="max-w-[700px] text-[clamp(2.35rem,3.9vw,4.2rem)] leading-[1.08] font-bold tracking-[-0.045em] text-[#232025] uppercase">Building<br /><span className="text-[#780c24]">high-performance</span><br />ecosystems</h1>
           <p className="mt-6 text-xs leading-6 font-semibold tracking-wide text-[#59454e] sm:text-sm">Infrastructure | Performance | Technology | Workforce</p>
           <div className="mt-6">

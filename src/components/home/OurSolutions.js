@@ -33,7 +33,7 @@ export default function OurSolutions() {
       <div className="mx-auto max-w-[1480px] px-6 py-16 sm:px-10 sm:py-20 lg:px-12 lg:py-24">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase"><span aria-hidden="true" className="h-px w-8 bg-[#780c24]" />Our solutions</p>
+            <p className="mb-5 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase">Our solutions</p>
             <h2 id="solutions-heading" className="text-3xl leading-[1.15] font-semibold tracking-[-0.035em] text-[#232025] sm:text-4xl lg:text-[44px]">The capabilities behind<br /><span className="text-[#780c24]">better performance.</span></h2>
           </div>
           <p className="max-w-[390px] text-[15px] leading-7 text-[#171717]">Four connected areas of expertise, bringing the right environments, programmes and people together.</p>

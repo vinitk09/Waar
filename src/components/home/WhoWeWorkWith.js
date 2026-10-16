@@ -18,7 +18,7 @@ export default function WhoWeWorkWith() {
       <div className="mx-auto max-w-[1480px] px-6 py-16 sm:px-10 sm:py-20 lg:px-12 lg:py-24">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.4fr] lg:items-start lg:gap-16">
           <div>
-            <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase"><span aria-hidden="true" className="h-px w-8 bg-[#780c24]" />Who we work with</p>
+            <p className="mb-5 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase">Who we work with</p>
             <h2 id="audiences-heading" className="max-w-[490px] text-3xl leading-[1.15] font-semibold tracking-[-0.035em] text-[#232025] sm:text-4xl lg:text-[44px]">Built for<br /><span className="text-[#780c24]">performance-driven</span><br />organisations.</h2>
             <p className="mt-5 max-w-[400px] text-[15px] leading-7 text-[#171717]">For people pursuing their next milestone and organisations creating the environments that help them get there.</p>
             <div className="mt-7 flex items-center gap-3 text-xs leading-5 text-[#171717]"><span aria-hidden="true" className="size-1.5 shrink-0 rounded-full bg-[#780c24]" /><p>Our intended audiences across sport, defence and the wider community.</p></div>

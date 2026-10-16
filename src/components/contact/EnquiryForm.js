@@ -307,16 +307,6 @@ export default function EnquiryForm({ context, local }) {
       >
         {busy ? "Saving enquiry…" : "Submit enquiry"}
       </button>
-      <p className="text-xs leading-6 text-[#171717]">
-        Submission begins an enquiry. The team must separately confirm programme
-        availability, admission or appointment arrangements.
-      </p>
-      {local && (
-        <p className="text-xs leading-6 text-[#171717]">
-          Local development: submissions are stored privately on this server.
-          Email delivery is not connected.
-        </p>
-      )}
     </form>
   );
 }

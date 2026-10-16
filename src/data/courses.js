@@ -1,4 +1,5 @@
 import { defenceProgrammes } from "./defence-programmes";
+import { courseAcademics } from "./course-academics";
 
 export const courses = [
   ...defenceProgrammes.map(programme => ({
@@ -9,6 +10,7 @@ export const courses = [
   })),
   {
     slug: "cscs-preparation", title: "CSCS Preparation", short: "CSCS", category: "Professional Education",
+    ...courseAcademics["cscs-preparation"],
     description: "Explore preparation for the external CSCS credential. Confirm the teaching scope and current availability with the WAARR team.",
     audience: "Coaches and aspiring strength and conditioning practitioners seeking credential preparation.",
     focus: ["Strength & conditioning preparation", "Professional study planning", "Applied performance learning"],
@@ -17,10 +19,10 @@ export const courses = [
 ];
 
 export const learningJourney = [
-  { name: "Discuss your goals", detail: "Review the course fit, delivery mode and upcoming batch with the team." },
-  { name: "Confirm enrolment", detail: "Confirm admission, programme terms and your assigned batch before learning access is activated." },
+  { name: "Explore course details", detail: "Review the course overview and learning focus. Lessons, resources and tests stay locked." },
+  { name: "Enrol and complete payment", detail: "Fill in the course enrolment form and complete payment to unlock that course in your learner account." },
   { name: "Follow your timetable", detail: "Use your assigned class schedule, session topics and learning resources." },
-  { name: "Practise and review", detail: "Follow the preparation activities and feedback included in your course." },
+  { name: "Practise and review", detail: "Take your course test series, review answer explanations and track your saved results in the learning portal." },
 ];
 
 export function courseEnquiry(course) {
