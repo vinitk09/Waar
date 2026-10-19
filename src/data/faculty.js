@@ -12,6 +12,7 @@ export const faculty = pathways.flatMap(course =>
   courseAcademics[course.slug].teachers.map(teacher => ({
     ...teacher,
     slug: teacher.name.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+    image: `/images/faculty/${teacher.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.webp`,
     initials: teacher.name.split(" ").map(part => part[0]).join(""),
     sample: true,
     courses: [course],

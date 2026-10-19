@@ -9,7 +9,7 @@ export const metadata = { title: "Sitemap | WAARR", description: "Find WAARR’s
 
 const groups = [
   { title: "Faculty", links: [["Faculty slider", "/#faculty"], ...faculty.map(member => [member.name, `/faculty/${member.slug}`])] },
-  { title: "Main pages", links: [["Home", "/"], ["Sports", "/sports"], ["Defence", "/defence"], ["Solutions", "/solutions"], ["Projects", "/projects"], ["About", "/about"], ["Contact", "/contact"]] },
+  { title: "Main pages", links: [["Home", "/"], ["Sports", "/sports"], ["Defence", "/defence"], ["Results & selections", "/results"], ["Solutions", "/solutions"], ["Projects", "/projects"], ["About", "/about"], ["Contact", "/contact"]] },
   { title: "Solution capabilities", links: [["Infrastructure", "/solutions#infrastructure"], ["Performance", "/solutions#performance"], ["Workforce", "/solutions/workforce"], ["Education", "/solutions/education"], ["Performance Intelligence", "/solutions/performance-intelligence"]] },
   { title: "Learning", links: [["All courses", "/courses"], ["Participant login", "/portal/login"], ...courses.map(course => [course.title, `/courses/${course.slug}`])] },
   { title: "Project overviews", links: projects.map(project => [project.name, `/projects/${project.slug}`]) },

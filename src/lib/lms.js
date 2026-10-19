@@ -8,6 +8,7 @@ import { courses } from "@/data/courses";
 import { courseTests } from "@/lib/test-series";
 import { gradeTest } from "@/lib/test-grading";
 import { hasCourseAccess } from "@/lib/course-access";
+import { learnerPurchases } from "@/lib/learner-purchases";
 
 const directory = path.join(process.cwd(), ".data");
 const file = path.join(directory, "lms.json");
@@ -54,13 +55,13 @@ export async function currentLearner() {
   if (!session) return null;
   const user = store.users.find(item => item.id === session.userId);
   if (!user || user.demo) return null;
-  return { user: { id: user.id, name: user.name, email: user.email }, enrolments: store.enrolments.filter(item => permitted(store, item, user.id, now)), progress: store.progress[user.id] ?? {} };
+  return { user: { id: user.id, name: user.name, email: user.email }, enrolments: store.enrolments.filter(item => permitted(store, item, user.id, now)), progress: store.progress[user.id] ?? {}, purchases: learnerPurchases(store, user.id, now, demoPaymentsEnabled()) };
 }
 
 export async function startSession({ demo, email, password }) {
   if (demo) return null;
   return mutate(store => {
-    const user = store.users.find(item => !item.demo && item.email?.toLowerCase() === email?.toLowerCase());
+    const user = store.users.find(item => !item.demo && item.email?.toLowerCase() === email?.trim().toLowerCase());
     const salt = user?.salt ?? "invalid-user-salt";
     const candidate = scryptSync(password ?? "", salt, 64);
     const stored = user?.passwordHash ? Buffer.from(user.passwordHash, "hex") : Buffer.alloc(64);
@@ -69,6 +70,22 @@ export async function startSession({ demo, email, password }) {
     store.sessions = store.sessions.filter(item => item.expires > Date.now());
     store.sessions.push({ hash: hash(token), userId: user.id, expires: Date.now() + 8 * 3600000 });
     return token;
+  });
+}
+
+export async function createLearner({ name, email, password }) {
+  return mutate(store => {
+    if (store.users.some(item => item.email?.toLowerCase() === email)) {
+      return { error: "An account with this email already exists. Please sign in.", status: 409 };
+    }
+    const salt = randomBytes(16).toString("hex");
+    const user = { id: randomBytes(16).toString("hex"), name, email, salt,
+      passwordHash: scryptSync(password, salt, 64).toString("hex") };
+    store.users.push(user);
+    const token = randomBytes(32).toString("hex");
+    store.sessions = store.sessions.filter(item => item.expires > Date.now());
+    store.sessions.push({ hash: hash(token), userId: user.id, expires: Date.now() + 8 * 3600000 });
+    return { token };
   });
 }
 

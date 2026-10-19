@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { faculty } from "@/data/faculty";
 
@@ -39,16 +40,16 @@ export default function FacultySlider() {
   return <section id="faculty" aria-labelledby="faculty-heading" aria-roledescription="carousel" className="overflow-hidden bg-white">
     <div className="mx-auto max-w-[1480px] px-6 py-12 sm:px-10 sm:py-16 lg:px-12">
       <div className="flex flex-wrap items-end justify-between gap-6">
-        <div><p className="mb-4 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase"><span aria-hidden="true" className="h-0.5 w-6 bg-[#780c24]" />Meet the faculty</p><h2 id="faculty-heading" className="text-3xl leading-tight font-semibold tracking-[-0.035em] text-[#232025] sm:text-4xl">Guidance for <span className="text-[#780c24]">every step.</span></h2><p className="mt-4 max-w-[650px] text-sm leading-7 text-[#70616a]">Explore our sample faculty profiles across written preparation, communication and SSB practice.</p></div>
+        <div data-scroll-reveal><p className="mb-4 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase"><span aria-hidden="true" className="h-0.5 w-6 bg-[#780c24]" />Meet the faculty</p><h2 id="faculty-heading" className="text-3xl leading-tight font-semibold tracking-[-0.035em] text-[#232025] sm:text-4xl">Guidance for <span className="text-[#780c24]">every step.</span></h2><p className="mt-4 max-w-[650px] text-sm leading-7 text-[#70616a]">Explore our sample faculty profiles across written preparation, communication and SSB practice.</p></div>
         <div className="flex gap-3">
           <button type="button" aria-label="Previous faculty" aria-controls="faculty-track" disabled={position.atStart} onClick={() => move(-1)} className={`grid size-12 cursor-pointer place-items-center rounded-full border border-[#780c24] text-xl text-[#780c24] transition-colors hover:bg-[#f5e9ee] disabled:cursor-default disabled:border-[#e3d5db] disabled:text-[#b9aab1] ${focus}`}>←</button>
           <button type="button" aria-label="Next faculty" aria-controls="faculty-track" disabled={position.atEnd} onClick={() => move(1)} className={`grid size-12 cursor-pointer place-items-center rounded-full border border-[#780c24] text-xl text-[#780c24] transition-colors hover:bg-[#f5e9ee] disabled:cursor-default disabled:border-[#e3d5db] disabled:text-[#b9aab1] ${focus}`}>→</button>
         </div>
       </div>
-      <ul id="faculty-track" ref={track} aria-label="Faculty profiles; swipe or use the arrow buttons to browse" className="mt-8 grid snap-x snap-mandatory auto-cols-[100%] grid-flow-col gap-6 overflow-x-auto overscroll-x-contain py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:auto-cols-[calc((100%-24px)/2)] lg:auto-cols-[calc((100%-48px)/3)]">
-        {faculty.map((member, index) => <li key={member.slug} className="min-w-0 snap-start">
+      <ul data-reveal-group id="faculty-track" ref={track} aria-label="Faculty profiles; swipe or use the arrow buttons to browse" className="mt-8 grid snap-x snap-mandatory auto-cols-[100%] grid-flow-col gap-6 overflow-x-auto overscroll-x-contain py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:auto-cols-[calc((100%-24px)/2)] lg:auto-cols-[calc((100%-48px)/3)]">
+        {faculty.map(member => <li key={member.slug} className="min-w-0 snap-start">
           <Link href={`/faculty/${member.slug}`} aria-label={`View ${member.name}’s profile`} className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e9e1e4] bg-[#fcfaf9] transition-colors hover:border-[#b98094] ${focus}`}>
-            <div className={`relative grid h-44 place-items-center border-b border-[#e9e1e4] ${index % 2 === 0 ? "bg-[#f1e5e9]" : "bg-[#eae8e2]"}`}><span aria-hidden="true" className="grid size-24 place-items-center rounded-full border border-[#780c24]/15 bg-white/65 text-3xl font-semibold tracking-tight text-[#780c24]">{member.initials}</span><span className="absolute top-4 left-4 rounded bg-white/80 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-[#780c24] uppercase">Sample profile</span></div>
+            <div className="relative h-64 overflow-hidden border-b border-[#e9e1e4] bg-[#f1e5e9]"><Image src={member.image} alt={`Fictional placeholder portrait for ${member.name}'s sample profile`} fill sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" className="object-cover object-[center_30%] transition-transform duration-500 motion-safe:group-hover:scale-105" /><span className="absolute top-4 left-4 rounded bg-white/90 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-[#780c24] uppercase">Sample profile</span></div>
             <div className="flex flex-1 flex-col p-6"><p className="text-[10px] font-semibold tracking-[0.12em] text-[#780c24] uppercase">{member.courses[0].title}</p><h3 className="mt-3 text-xl font-semibold text-[#302830]">{member.name}</h3><p className="mt-2 text-sm text-[#70616a]">{member.role}</p><p className="mt-4 mb-5 flex-1 text-sm leading-6 text-[#70616a]">{member.subjects.join(" · ")}</p><span className="flex min-h-11 items-center justify-between gap-3 border-t border-[#e9e1e4] pt-4 text-sm font-semibold text-[#780c24]">View faculty profile <span aria-hidden="true" className="transition-transform motion-safe:group-hover:translate-x-1">→</span></span></div>
           </Link>
         </li>)}

@@ -5,7 +5,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
+import Breadcrumbs from "./Breadcrumbs";
 
 
 const links = [["Home", "/"], ["Defence", "/defence"], ["Courses", "/courses"], ["Batches", "/#upcoming-batches"], ["About", "/about"], ["Contact", "/contact"]];
@@ -52,7 +53,7 @@ export default function Header() {
     document.addEventListener("keydown", escape);
     return () => { document.removeEventListener("pointerdown", outside); document.removeEventListener("keydown", escape); };
   }, [open, dropdown]);
-  return <header className="sticky top-0 z-50 border-t-[3px] border-t-[#780c24] border-b border-b-[#e9e5e5] bg-white font-sans text-[#242125] [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-[#780c24] [&_a:focus-visible]:outline-offset-[5px] [&_button:focus-visible]:outline-2 [&_button:focus-visible]:outline-[#780c24] [&_button:focus-visible]:outline-offset-[5px]" ref={header}>
+  return <><header className="sticky top-0 z-50 border-t-[3px] border-t-[#780c24] border-b border-b-[#e9e5e5] bg-white font-sans text-[#242125] [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-[#780c24] [&_a:focus-visible]:outline-offset-[5px] [&_button:focus-visible]:outline-2 [&_button:focus-visible]:outline-[#780c24] [&_button:focus-visible]:outline-offset-[5px]" ref={header}>
     <div className="mx-auto flex w-full flex-wrap items-center justify-between gap-0 px-5 py-3.5 lg:flex-nowrap lg:justify-start lg:gap-[22px] lg:px-6 lg:py-4 xl:grid xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] xl:gap-6 xl:px-9 xl:py-5">
       <Link href="/" className="flex shrink-0 items-center gap-2.5 no-underline" onClick={close} aria-label="WAARR home">
         <Image src="/logo1.png" alt="WAARR" width={56} height={56} priority className="size-12 object-contain lg:size-14" />
@@ -73,12 +74,12 @@ export default function Header() {
           })}
         </nav>
         <div className="flex flex-col items-stretch gap-5 border-t border-[#eee7e9] pt-5 pb-1.5 lg:flex-row lg:items-center lg:gap-3.5 lg:border-0 lg:p-0 lg:ml-auto lg:shrink-0 xl:col-start-3 xl:justify-self-end xl:gap-5">
-          <Link href="/portal/login" className="inline-flex min-h-12 items-center justify-center gap-3 rounded-lg border border-[#780c24] bg-white px-4 py-3 text-sm font-semibold whitespace-nowrap text-[#780c24] no-underline transition-colors duration-200 hover:bg-[#780c24] hover:text-white focus-visible:bg-[#780c24] focus-visible:text-white lg:text-xs" onClick={close}>Participant Login<Arrow /></Link>
+          <Link href="/portal/login" className="inline-flex min-h-12 items-center justify-center gap-3 rounded-lg border border-[#780c24] bg-white px-4 py-3 text-sm font-semibold whitespace-nowrap text-[#780c24] no-underline transition-colors duration-200 hover:bg-[#780c24] hover:text-white focus-visible:bg-[#780c24] focus-visible:text-white lg:text-xs" onClick={close}>Login / Sign up<Arrow /></Link>
           <Link href="/contact?interest=Defence%20Preparation&amp;source=header" className="flex items-center justify-center gap-3 rounded border border-[#780c24] bg-[#780c24] p-[17px] text-xs font-semibold text-white no-underline transition-colors duration-200 hover:bg-white hover:text-[#780c24] focus-visible:bg-white focus-visible:text-[#780c24] lg:max-w-[185px] lg:px-[17px] lg:py-[15px] lg:text-[11px] xl:w-[230px] xl:max-w-[230px]" onClick={close}>Discuss Your Preparation<Arrow /></Link>
         </div>
       </div>
     </div>
-  </header>;
+  </header><Suspense fallback={null}><Breadcrumbs /></Suspense></>;
 }
 
 

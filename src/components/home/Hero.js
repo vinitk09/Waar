@@ -1,6 +1,7 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
 import CourseMarquee from "./CourseMarquee";
+import AchievementsStrip from "./AchievementsStrip";
 
 function Arrow() {
   return <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>;
@@ -10,6 +11,7 @@ export default function Hero() {
   return (
     <section aria-labelledby="hero-heading" className="relative isolate overflow-hidden bg-[#faf7f5] font-sans">
       <CourseMarquee />
+      <AchievementsStrip />
       <div aria-hidden="true" className="pointer-events-none absolute -top-48 -left-48 size-[550px] rounded-full border border-[#780c24]/5" />
       <div className="mx-auto grid max-w-[1480px] items-center gap-12 px-6 py-12 sm:px-10 sm:py-16 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:px-12 lg:py-20">
         <div className="motion-safe:animate-hero-reveal">
