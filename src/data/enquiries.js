@@ -1,4 +1,4 @@
-export const enquiryInterests = ["Sports Infrastructure", "High-Performance Centre", "Athlete Performance", "Sports Assessment", "Defence Preparation", "NDA / CDS / SSB", "Defence Performance", "Workforce Deployment", "Coach Education", "Performance Consulting", "Other"];
+export const enquiryInterests = ["Defence Preparation", "NDA / CDS / SSB", "Defence Performance", "Sports Infrastructure", "High-Performance Centre", "Athlete Performance", "Sports Assessment", "Workforce Deployment", "Coach Education", "Performance Consulting", "Other"];
 export const defenceInterests = ["Defence Preparation", "NDA / CDS / SSB", "Defence Performance"];
 
 export function normaliseInterest(value) {

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const quickLinks = [["Home", "/"], ["Sports", "/sports"], ["Defence", "/defence"], ["Courses", "/courses"], ["Solutions", "/solutions"], ["Projects", "/projects"], ["About", "/about"], ["Contact", "/contact"]];
-const services = [["Infrastructure", "/solutions#infrastructure"], ["Performance", "/solutions#performance"], ["Workforce", "/solutions/workforce"], ["Education", "/solutions/education"], ["Performance Intelligence", "/solutions/performance-intelligence"]];
+const quickLinks = [["Home", "/"], ["Defence", "/defence"], ["Defence Courses", "/courses"], ["Upcoming Batches", "/#upcoming-batches"], ["Preparation Guides", "/#preparation-guides"], ["About", "/about"], ["Contact", "/contact"], ["Sports", "/sports"]];
+const services = [["NDA Preparation", "/courses/nda"], ["CDS Preparation", "/courses/cds"], ["SSB Preparation", "/courses/ssb"], ["AFCAT Preparation", "/courses/afcat"], ["ACC Preparation", "/courses/acc"], ["SSB Mock Assessments", "/courses/ssb-mock-assessments"]];
 
 function FooterLinks({ title, links }) {
   return (
@@ -23,14 +23,14 @@ export default function Footer() {
           <div>
             <Link href="/" aria-label="WAARR home" className="inline-flex items-center gap-3">
               <span className="grid size-16 place-items-center rounded-xl bg-white"><Image src="/logo1.png" alt="" width={52} height={52} className="object-contain" /></span>
-              <span className="text-2xl font-bold tracking-[-0.03em]">WAARR<span className="mt-1 block text-[10px] font-medium tracking-[0.16em] text-[#e0a8b9] uppercase">Sports | Defence</span></span>
+              <span className="text-2xl font-bold tracking-[-0.03em]">WAARR<span className="mt-1 block text-[10px] font-medium tracking-[0.16em] text-[#e0a8b9] uppercase">Defence Academy</span></span>
             </Link>
-            <p className="mt-6 max-w-[300px] text-xl leading-7 font-semibold tracking-[-0.02em]">Building High-Performance Ecosystems</p>
-            <p className="mt-4 max-w-[320px] text-xs leading-6 text-[#c8bbc2]">Infrastructure | Performance | Technology | Workforce</p>
+            <p className="mt-6 max-w-[300px] text-xl leading-7 font-semibold tracking-[-0.02em]">Preparing for a life of purpose and service.</p>
+            <p className="mt-4 max-w-[320px] text-xs leading-6 text-[#c8bbc2]">Written Preparation | SSB | Physical Readiness</p>
             <Link href="/portal/login" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-lg border border-white/15 px-4 py-2 text-xs font-semibold text-[#e0a8b9] transition-colors hover:border-[#e0a8b9]/50 hover:bg-white/5">Participant Login<span aria-hidden="true">→</span></Link>
           </div>
           <FooterLinks title="Quick links" links={quickLinks} />
-          <FooterLinks title="Services" links={services} />
+          <FooterLinks title="Defence courses" links={services} />
           <div>
             <h2 className="mb-5 text-xs font-semibold tracking-[0.12em] uppercase">Defence</h2>
             <p className="text-sm leading-7 text-[#c8bbc2]">NDA · CDS · SSB<br />Physical Performance<br />Institutional Solutions</p>

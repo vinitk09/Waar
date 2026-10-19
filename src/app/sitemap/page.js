@@ -3,10 +3,12 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { courses } from "@/data/courses";
 import { projects } from "@/data/projects";
+import { faculty } from "@/data/faculty";
 
 export const metadata = { title: "Sitemap | WAARR", description: "Find WAARR’s main pages, course overviews, projects and participant login." };
 
 const groups = [
+  { title: "Faculty", links: [["Faculty slider", "/#faculty"], ...faculty.map(member => [member.name, `/faculty/${member.slug}`])] },
   { title: "Main pages", links: [["Home", "/"], ["Sports", "/sports"], ["Defence", "/defence"], ["Solutions", "/solutions"], ["Projects", "/projects"], ["About", "/about"], ["Contact", "/contact"]] },
   { title: "Solution capabilities", links: [["Infrastructure", "/solutions#infrastructure"], ["Performance", "/solutions#performance"], ["Workforce", "/solutions/workforce"], ["Education", "/solutions/education"], ["Performance Intelligence", "/solutions/performance-intelligence"]] },
   { title: "Learning", links: [["All courses", "/courses"], ["Participant login", "/portal/login"], ...courses.map(course => [course.title, `/courses/${course.slug}`])] },

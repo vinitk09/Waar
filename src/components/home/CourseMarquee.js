@@ -13,7 +13,7 @@ export default function CourseMarquee() {
           <div className="course-marquee-track">
             {[0, 1].map(copy => (
               <ul key={copy} aria-hidden={copy === 1 ? true : undefined} className={`course-marquee-list ${copy === 1 ? "course-marquee-copy" : ""}`}>
-                {courses.map(course => (
+                {courses.filter(course => course.category === "Defence").map(course => (
                   <li key={course.slug}>
                     <Link href={`/courses/${course.slug}`} tabIndex={copy === 1 ? -1 : undefined} className="inline-flex min-h-11 items-center gap-5 whitespace-nowrap text-xs font-medium text-white transition-colors hover:text-[#f1c8d5] sm:text-sm">
                       {course.title}<span aria-hidden="true" className="size-1 rounded-full bg-[#e0a8b9]" />

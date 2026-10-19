@@ -44,7 +44,8 @@ export default function SectionNavigation() {
         if (!document.getElementById(id)) return;
         event.preventDefault();
         if (url.hash !== window.location.hash) window.history.pushState(null, "", url.pathname + url.search + url.hash);
-        scrollToHash(url.hash);
+        // Measure the header after a mobile navigation link closes the menu.
+        scheduleScroll();
       } else {
         // Let the destination mount before scrolling, rather than jumping first.
         event.preventDefault();

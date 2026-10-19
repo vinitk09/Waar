@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 
-const links = [["Home", "/"], ["Sports", "/sports"], ["Defence", "/defence"], ["Solutions", "/solutions"], ["Projects", "/projects"], ["About", "/about"], ["Contact", "/contact"]];
+const links = [["Home", "/"], ["Defence", "/defence"], ["Courses", "/courses"], ["Batches", "/#upcoming-batches"], ["About", "/about"], ["Contact", "/contact"]];
 const solutions = [["Infrastructure", "/solutions#infrastructure"], ["Performance", "/solutions#performance"], ["Workforce", "/solutions/workforce"], ["Education", "/solutions/education"], ["Performance Intelligence", "/solutions/performance-intelligence"]];
 
 function Arrow({ down = false }) {
@@ -56,7 +56,7 @@ export default function Header() {
     <div className="mx-auto flex w-full flex-wrap items-center justify-between gap-0 px-5 py-3.5 lg:flex-nowrap lg:justify-start lg:gap-[22px] lg:px-6 lg:py-4 xl:grid xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] xl:gap-6 xl:px-9 xl:py-5">
       <Link href="/" className="flex shrink-0 items-center gap-2.5 no-underline" onClick={close} aria-label="WAARR home">
         <Image src="/logo1.png" alt="WAARR" width={56} height={56} priority className="size-12 object-contain lg:size-14" />
-        <span className="text-[22px] leading-[1.2] font-extrabold tracking-[-0.8px] lg:hidden xl:block xl:text-[25px]">WAARR<small className="mt-[5px] block text-[9px] font-medium tracking-[1.5px] text-[#777078] uppercase">Sports & Defence</small></span>
+        <span className="text-[22px] leading-[1.2] font-extrabold tracking-[-0.8px] lg:hidden xl:block xl:text-[25px]">WAARR<small className="mt-[5px] block text-[9px] font-medium tracking-[1.5px] text-[#777078] uppercase">Defence Academy</small></span>
       </Link>
       <button ref={menuButton} type="button" className="grid cursor-pointer place-items-center rounded border border-[#e5dce0] bg-white p-[9px] text-[#780c24] lg:hidden" aria-expanded={open} aria-controls="header-navigation" aria-label={open ? "Close navigation" : "Open navigation"} onClick={() => { setOpen(!open); setDropdown(false); }}>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d={open ? "m6 6 12 12M6 18 18 6" : "M4 6h16M4 12h16M4 18h16"} stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" /></svg>
@@ -74,7 +74,7 @@ export default function Header() {
         </nav>
         <div className="flex flex-col items-stretch gap-5 border-t border-[#eee7e9] pt-5 pb-1.5 lg:flex-row lg:items-center lg:gap-3.5 lg:border-0 lg:p-0 lg:ml-auto lg:shrink-0 xl:col-start-3 xl:justify-self-end xl:gap-5">
           <Link href="/portal/login" className="inline-flex min-h-12 items-center justify-center gap-3 rounded-lg border border-[#780c24] bg-white px-4 py-3 text-sm font-semibold whitespace-nowrap text-[#780c24] no-underline transition-colors duration-200 hover:bg-[#780c24] hover:text-white focus-visible:bg-[#780c24] focus-visible:text-white lg:text-xs" onClick={close}>Participant Login<Arrow /></Link>
-          <Link href="/contact" className="flex items-center justify-center gap-3 rounded border border-[#780c24] bg-[#780c24] p-[17px] text-xs font-semibold text-white no-underline transition-colors duration-200 hover:bg-white hover:text-[#780c24] focus-visible:bg-white focus-visible:text-[#780c24] lg:max-w-[185px] lg:px-[17px] lg:py-[15px] lg:text-[11px] xl:w-[230px] xl:max-w-[230px]" onClick={close}>Build your performance ecosystem<Arrow /></Link>
+          <Link href="/contact?interest=Defence%20Preparation&amp;source=header" className="flex items-center justify-center gap-3 rounded border border-[#780c24] bg-[#780c24] p-[17px] text-xs font-semibold text-white no-underline transition-colors duration-200 hover:bg-white hover:text-[#780c24] focus-visible:bg-white focus-visible:text-[#780c24] lg:max-w-[185px] lg:px-[17px] lg:py-[15px] lg:text-[11px] xl:w-[230px] xl:max-w-[230px]" onClick={close}>Discuss Your Preparation<Arrow /></Link>
         </div>
       </div>
     </div>
