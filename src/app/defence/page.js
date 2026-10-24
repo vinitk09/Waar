@@ -147,7 +147,7 @@ export default function DefencePage() {
 
         <section aria-labelledby="approach-heading" className="bg-white">
           <div className={`${container} py-16 sm:py-20 lg:py-24`}>
-            <Eyebrow id="approach">Progress, one step at a time</Eyebrow>
+            <div><Eyebrow id="approach">Progress, one step at a time</Eyebrow></div>
             <h2 id="approach-heading" className={heading}>A clear plan.<br /><span className="text-[#780c24]">Consistent progress.</span></h2>
             <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">{process.map((step, index) => (
               <li key={step.name} className="border-t-2 border-[#dac7ce] pt-5">
