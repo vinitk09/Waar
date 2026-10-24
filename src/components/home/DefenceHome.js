@@ -1,8 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { defenceProgrammes, defenceEnquiry } from "@/data/defence-programmes";
-import { academyPhotos, preparationGuides, upcomingBatches } from "@/data/home-defence";
+import { preparationGuides, upcomingBatches } from "@/data/home-defence";
 import FacultySlider from "./FacultySlider";
+import HomeEnquiry from "./HomeEnquiry";
+import AcademyGallery from "./AcademyGallery";
 
 const container = "mx-auto max-w-[1480px] px-6 sm:px-10 lg:px-12";
 const spacing = "py-16 sm:py-20 lg:py-24";
@@ -70,13 +71,7 @@ export default function DefenceHome() {
       </div>
     </section>
 
-    <section aria-labelledby="academy-heading" className="bg-[#faf7f5]">
-      <div className={`${container} ${spacing}`}>
-        <Eyebrow>The ambition that inspires us</Eyebrow><h2 id="academy-heading" className={heading}>A glimpse into <span className="text-[#780c24]">life at NDA.</span></h2><p className="mt-5 max-w-[640px] text-sm leading-7 text-[#70616a]">Academics, physical training and leadership: a window into the academy that inspires so many defence aspirants.</p>
-        <div data-reveal-group className="mt-9 grid gap-6 md:grid-cols-3">{academyPhotos.map(photo => <figure key={photo.file} className="overflow-hidden rounded-2xl border border-[#e9e1e4] bg-white"><div className="relative aspect-[4/3]"><Image src={`/images/nda/${photo.file}`} alt={photo.alt} fill sizes="(max-width: 767px) 100vw, 33vw" className="object-cover" /></div><figcaption className="p-6"><h3 className="text-lg font-semibold text-[#302830]">{photo.title}</h3><p className="mt-2 text-sm leading-6 text-[#70616a]">{photo.caption}</p><a href={`https://nda.nic.in/images/pillars_images/${photo.source}`} target="_blank" rel="noreferrer" className={`mt-3 inline-flex min-h-11 items-center text-xs text-[#780c24] underline underline-offset-4 ${focus}`}>Photo: National Defence Academy ↗</a></figcaption></figure>)}</div>
-        <p className="mt-5 text-xs leading-6 text-[#70616a]">Images from the official National Defence Academy website show NDA activities. WAARR is an independent preparation provider.</p>
-      </div>
-    </section>
+    <AcademyGallery />
 
     <section id="preparation-guides" aria-labelledby="guides-heading" className="bg-white">
       <div className={`${container} ${spacing}`}>
@@ -90,6 +85,8 @@ export default function DefenceHome() {
     </section>
 
     <FacultySlider />
+
+    <HomeEnquiry />
 
     <section id="founders-message" aria-labelledby="founder-heading" className="bg-[#f5ecef]">
       <div className={`${container} ${spacing} grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20`}>

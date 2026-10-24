@@ -5,10 +5,11 @@ export const upcomingBatches = [
   { slug: "ssb", title: "SSB Preparation", label: "Interview preparation", description: "Prepare for psychological tasks, group activities and personal interviews through guided practice." },
 ];
 
-export const academyPhotos = [
-  { file: "academics.jpg", title: "Academic foundations", alt: "Academic building with a clock tower at the National Defence Academy", source: "Academics.JPG", caption: "Knowledge gives ambition direction." },
-  { file: "physical-training.jpg", title: "Physical readiness", alt: "Physical training at the National Defence Academy", source: "Physical_Training.JPG", caption: "Consistency builds the capacity to serve." },
-  { file: "leadership.jpg", title: "Leadership & character", alt: "Leadership training at the National Defence Academy", source: "Leadership.JPG", caption: "Responsibility starts with everyday actions." },
+export const academies = [
+  { slug: "nda", short: "NDA", name: "National Defence Academy", label: "One ambition. Three services.", paradeAlt: "NDA cadets in white ceremonial uniforms on parade", campusAlt: "National Defence Academy building and landscaped grounds", position: "center 35%" },
+  { slug: "ima", short: "IMA", name: "Indian Military Academy", label: "The resolve to lead.", paradeAlt: "Cadets marching past the Indian Military Academy building", campusAlt: "Red and white Indian Military Academy building with its clock tower", position: "center 55%" },
+  { slug: "ina", short: "INA", name: "Indian Naval Academy", label: "A calling beyond the horizon.", paradeAlt: "Naval cadets in white uniforms marching in formation", campusAlt: "Indian Naval Academy campus with the Indian flag", position: "center 60%" },
+  { slug: "afa", short: "AFA", name: "Air Force Academy", label: "Set your sights higher.", paradeAlt: "Air Force cadets on parade beneath a displayed fighter aircraft", campusAlt: "Air Force Academy parade ground during an aircraft flypast", position: "center 55%" },
 ];
 
 export const preparationGuides = [

@@ -75,7 +75,7 @@ export default function Header() {
         </nav>
         <div className="flex flex-col items-stretch gap-5 border-t border-[#eee7e9] pt-5 pb-1.5 lg:flex-row lg:items-center lg:gap-3.5 lg:border-0 lg:p-0 lg:ml-auto lg:shrink-0 xl:col-start-3 xl:justify-self-end xl:gap-5">
           <Link href="/portal/login" className="inline-flex min-h-12 items-center justify-center gap-3 rounded-lg border border-[#780c24] bg-white px-4 py-3 text-sm font-semibold whitespace-nowrap text-[#780c24] no-underline transition-colors duration-200 hover:bg-[#780c24] hover:text-white focus-visible:bg-[#780c24] focus-visible:text-white lg:text-xs" onClick={close}>Login / Sign up<Arrow /></Link>
-          <Link href="/contact?interest=Defence%20Preparation&amp;source=header" className="flex items-center justify-center gap-3 rounded border border-[#780c24] bg-[#780c24] p-[17px] text-xs font-semibold text-white no-underline transition-colors duration-200 hover:bg-white hover:text-[#780c24] focus-visible:bg-white focus-visible:text-[#780c24] lg:max-w-[185px] lg:px-[17px] lg:py-[15px] lg:text-[11px] xl:w-[230px] xl:max-w-[230px]" onClick={close}>Discuss Your Preparation<Arrow /></Link>
+          <Link href="/contact?interest=Defence%20Preparation&amp;source=header" className="flex items-center justify-center gap-3 rounded border border-[#780c24] bg-[#780c24] p-[17px] text-xs font-semibold text-white no-underline transition-colors duration-200 hover:bg-white hover:text-[#780c24] focus-visible:bg-white focus-visible:text-[#780c24] lg:max-w-[185px] lg:px-[17px] lg:py-[15px] lg:text-[11px] xl:w-[230px] xl:max-w-[230px]" onClick={close}>Enquire<Arrow /></Link>
         </div>
       </div>
     </div>
