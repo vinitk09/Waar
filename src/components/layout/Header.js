@@ -9,7 +9,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import Breadcrumbs from "./Breadcrumbs";
 
 
-const links = [["Home", "/"], ["Defence", "/defence"], ["Courses", "/courses"], ["Batches", "/#upcoming-batches"], ["About", "/about"], ["Contact", "/contact"]];
+const links = [["Home", "/"], ["Defence", "/defence"], ["Courses", "/courses"], ["Batches", "/#upcoming-batches"], ["About", "/about"]];
 const solutions = [["Infrastructure", "/solutions#infrastructure"], ["Performance", "/solutions#performance"], ["Workforce", "/solutions/workforce"], ["Education", "/solutions/education"], ["Performance Intelligence", "/solutions/performance-intelligence"]];
 
 function Arrow({ down = false }) {
