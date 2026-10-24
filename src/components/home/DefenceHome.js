@@ -88,10 +88,26 @@ export default function DefenceHome() {
 
     <HomeEnquiry />
 
-    <section id="founders-message" aria-labelledby="founder-heading" className="bg-[#f5ecef]">
+    <section id="founders-message" aria-labelledby="director-heading" className="bg-[#f5ecef]">
       <div className={`${container} ${spacing} grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20`}>
-        <div data-scroll-reveal><Eyebrow>A message from our founder</Eyebrow><h2 id="founder-heading" className={heading}>Your purpose.<br /><span className="text-[#780c24]">Our commitment.</span></h2><div aria-hidden="true" className="mt-7 h-1 w-16 bg-[#780c24]" /></div>
-        <div data-scroll-reveal><p className="text-xl leading-9 font-medium tracking-tight text-[#40323a] sm:text-2xl sm:leading-10">The desire to serve is a powerful beginning. Turning that desire into readiness takes discipline, patience and the courage to keep improving.</p><p className="mt-6 text-sm leading-8 text-[#59454e]">At WAARR, our purpose is to give defence aspirants a clear direction: build strong academic foundations, develop physical readiness and approach every challenge with integrity. We believe preparation should help you grow in confidence, responsibility and character, alongside your knowledge.</p><p className="mt-4 text-sm leading-8 text-[#59454e]">To every aspirant beginning this journey: stay curious, remain consistent and take pride in the effort you put in each day. We look forward to supporting your preparation.</p><div className="mt-7 border-t border-[#dac7ce] pt-5"><p className="text-sm font-bold tracking-wide text-[#780c24]">Founder, WAARR</p><p className="mt-1 text-xs text-[#70616a]">Discipline. Purpose. Service.</p></div></div>
+        <div data-scroll-reveal>
+          <Eyebrow>Leadership at WAARR</Eyebrow>
+          <h2 id="director-heading" className={heading}>Message From<br /><span className="text-[#780c24]">The Director</span></h2>
+          <div aria-hidden="true" className="mt-7 h-1 w-16 bg-[#780c24]" />
+        </div>
+        <div data-scroll-reveal>
+          <h3 className="text-xl font-semibold tracking-wide text-[#780c24]">DEAR ASPIRANTS</h3>
+          <div className="mt-6 space-y-4 text-sm leading-8 text-[#59454e]">
+            <p className="text-justify">WAARR has a clear mission: to help young aspirants grow through NDA preparation and sports. We aim to develop the knowledge, discipline, confidence and character they need to pursue their goals. NDA preparation goes beyond books and question papers. Sports, too, demand more than physical ability. Both journeys call for consistent practice, mental resilience, teamwork, communication and a willingness to improve. At WAARR, we support each aspirant with structured teaching, regular testing, individual mentoring, physical training, sports development and SSB-oriented personality development. We also keep parents informed about their progress. Whether your goal is to become an officer in the Indian Armed Forces, excel in sports or pursue both, WAARR will guide you with clarity, encouragement and accountability.</p>
+            <p className="font-semibold text-[#40323a]">Your journey towards becoming your best starts today.</p>
+          </div>
+          <div className="mt-7 border-t border-[#dac7ce] pt-5">
+            <p className="text-lg font-bold tracking-tight text-[#780c24]">Monika Sharma</p>
+            <p className="mt-1 text-sm text-[#59454e]">CSCS-USA (Strength and Conditioning Coach)</p>
+            <p className="mt-2 text-sm font-semibold text-[#780c24]">Founder &amp; Director, WAARR</p>
+            <p className="mt-1 text-xs text-[#70616a]">Discipline. Purpose. Service.</p>
+          </div>
+        </div>
       </div>
     </section>
   </>;
