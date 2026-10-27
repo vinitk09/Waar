@@ -37,7 +37,7 @@ export default function FacultySlider() {
     element.scrollBy({ left: direction * step, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
   }
 
-  return <section id="faculty" aria-labelledby="faculty-heading" aria-roledescription="carousel" className="overflow-hidden bg-white">
+  return <section id="faculty" aria-labelledby="faculty-heading" aria-roledescription="carousel" className="overflow-hidden border-t border-[#e9e1e4] bg-white">
     <div className="mx-auto max-w-[1480px] px-6 py-12 sm:px-10 sm:py-16 lg:px-12">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div data-scroll-reveal><p className="mb-4 flex items-center gap-3 text-[11px] font-semibold tracking-[0.18em] text-[#780c24] uppercase"><span aria-hidden="true" className="h-0.5 w-6 bg-[#780c24]" />Meet the faculty</p><h2 id="faculty-heading" className="text-3xl leading-tight font-semibold tracking-[-0.035em] text-[#232025] sm:text-4xl">Guidance for <span className="text-[#780c24]">every step.</span></h2><p className="mt-4 max-w-[650px] text-sm leading-7 text-[#70616a]">Explore our sample faculty profiles across written preparation, communication and SSB practice.</p></div>

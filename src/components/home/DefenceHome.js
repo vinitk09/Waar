@@ -80,10 +80,6 @@ export default function DefenceHome() {
       </div>
     </section>
 
-    <section aria-labelledby="sports-support-heading" className="border-y border-[#e9e1e4] bg-[#faf7f5]">
-      <div className={`${container} flex flex-col gap-5 py-8 sm:flex-row sm:items-center sm:justify-between`}><div data-scroll-reveal><p className="text-[10px] font-semibold tracking-[0.16em] text-[#780c24] uppercase">Also at WAARR</p><h2 id="sports-support-heading" className="mt-2 text-lg font-semibold text-[#302830]">Sports & performance support</h2><p className="mt-2 max-w-[750px] text-sm leading-6 text-[#70616a]">Explore our wider work in sports, strength and conditioning, and performance development.</p></div><Link href="/sports" className={`inline-flex min-h-11 shrink-0 items-center gap-3 text-sm font-semibold text-[#780c24] ${focus}`}>Explore sports <span aria-hidden="true">→</span></Link></div>
-    </section>
-
     <FacultySlider />
 
     <HomeEnquiry />

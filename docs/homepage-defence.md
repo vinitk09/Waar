@@ -1,6 +1,6 @@
 # Defence-focused homepage
 
-The homepage prioritises defence preparation, with one compact sports section. All nine existing defence programmes are linked, followed by preparation support, official NDA photographs, expandable study tips and a closing founder's message.
+The homepage prioritises defence preparation. All nine existing defence programmes are linked, followed by preparation support, official NDA photographs, expandable study tips and a closing founder's message.
 
 ## Content to confirm
 
