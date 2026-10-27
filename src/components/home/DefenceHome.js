@@ -94,12 +94,12 @@ export default function DefenceHome() {
         <div data-scroll-reveal>
           <h3 className="text-xl font-semibold tracking-wide text-[#780c24]">DEAR ASPIRANTS</h3>
           <div className="mt-6 space-y-4 text-sm leading-8 text-[#59454e]">
-            <p className="text-justify">WAARR has a clear mission: to help young aspirants grow through NDA preparation and sports. We aim to develop the knowledge, discipline, confidence and character they need to pursue their goals. NDA preparation goes beyond books and question papers. Sports, too, demand more than physical ability. Both journeys call for consistent practice, mental resilience, teamwork, communication and a willingness to improve. At WAARR, we support each aspirant with structured teaching, regular testing, individual mentoring, physical training, sports development and SSB-oriented personality development. We also keep parents informed about their progress. Whether your goal is to become an officer in the Indian Armed Forces, excel in sports or pursue both, WAARR will guide you with clarity, encouragement and accountability.</p>
+            <p className="text-justify">WAARR has a clear mission: to help young aspirants grow through structured defence and NDA preparation. We aim to develop the knowledge, discipline, confidence and character they need to pursue their goals. Defence preparation goes beyond books and question papers. Physical readiness and officer-like qualities demand consistent practice, mental resilience, teamwork, clear communication and an unwavering commitment to serve. At WAARR, we support each aspirant with structured teaching, regular testing, individual mentoring, physical training, endurance conditioning and SSB-oriented personality development. We also keep parents informed about their progress. When your goal is to become an officer in the Indian Armed Forces, WAARR will guide you with clarity, encouragement and accountability.</p>
             <p className="font-semibold text-[#40323a]">Your journey towards becoming your best starts today.</p>
           </div>
           <div className="mt-7 border-t border-[#dac7ce] pt-5">
             <p className="text-lg font-bold tracking-tight text-[#780c24]">Monika Sharma</p>
-            <p className="mt-1 text-sm text-[#59454e]">CSCS-USA (Strength and Conditioning Coach)</p>
+            <p className="mt-1 text-sm text-[#59454e]">CSCS-USA (Physical Training &amp; Conditioning Coach)</p>
             <p className="mt-2 text-sm font-semibold text-[#780c24]">Founder &amp; Director, WAARR</p>
             <p className="mt-1 text-xs text-[#70616a]">Discipline. Purpose. Service.</p>
           </div>

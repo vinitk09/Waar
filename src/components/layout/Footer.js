@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const quickLinks = [["Home", "/"], ["Defence", "/defence"], ["Defence Courses", "/courses"], ["Upcoming Batches", "/#upcoming-batches"], ["Preparation Guides", "/#preparation-guides"], ["About", "/about"], ["Contact", "/contact"], ["Sports", "/sports"]];
+const quickLinks = [["Home", "/"], ["Defence", "/defence"], ["Defence Courses", "/courses"], ["Upcoming Batches", "/#upcoming-batches"], ["Preparation Guides", "/#preparation-guides"], ["About", "/about"], ["Contact", "/contact"]];
 const services = [["NDA Preparation", "/courses/nda"], ["CDS Preparation", "/courses/cds"], ["SSB Preparation", "/courses/ssb"], ["AFCAT Preparation", "/courses/afcat"], ["ACC Preparation", "/courses/acc"], ["SSB Mock Assessments", "/courses/ssb-mock-assessments"]];
 
 function FooterLinks({ title, links }) {
